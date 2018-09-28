@@ -31,3 +31,17 @@ class User :
         delete_user method deletes user objects from our user_list
         """
         User.user_list.remove(self)
+
+    @classmethod
+    def find_by_accountname(cls,accountname):
+        """
+        Method that takes in an account name and returns an account that matches that account name
+    
+        Args:
+            account name: Account name to search for
+        Returns :
+            Account of user that matches the account name.
+        """
+        for user in cls.user_list:
+            if user.accountname == accountname:
+                return user
