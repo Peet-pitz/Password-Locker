@@ -4,19 +4,17 @@ class User :
     """
     user_list = []
 
-    def __init__ (self,user_name,accountname,email,password):
+    def __init__ (self,user_name,account_name,email,password):
 
         """
         __init__ method that helps us define properties for our objects.
 
         Args:
             name: New name of the user.
-            accountname : New name of the account.
-            email : New contact email address.
-            password : New password of the user.
+            
         """
         self.user_name = user_name
-        self.accountname = accountname
+        self.account_name = account_name
         self.email = email
         self.password = password
 
@@ -27,13 +25,13 @@ class User :
         User.user_list.append(self)
 
     def delete_user(self):
-        """
-        delete_user method deletes user objects from our user_list
-        """
-        User.user_list.remove(self)
+            """
+            delete_user method deletes user objects from our user_list
+            """
+            User.user_list.remove(self)
 
     @classmethod
-    def find_by_accountname(cls,accountname):
+    def find_by_account_name(cls,accountname):
         """
         Method that takes in an account name and returns an account that matches that account name
     
@@ -67,3 +65,5 @@ class User :
         method that returns the user list
         """
         return cls.user_list
+
+    

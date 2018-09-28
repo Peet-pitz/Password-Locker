@@ -1,5 +1,6 @@
 import unittest
 from password import User
+# from credential import Credential
 
 class TestUser(unittest.TestCase):
 
@@ -13,7 +14,7 @@ class TestUser(unittest.TestCase):
         """
         Set up method to run before each rest cases.
         """
-        self.new_user = User("Pitz","Facebook","@pitz.com","Pass123")
+        self.new_user = User("Test","Facebook","@pitz.com","Pass123")
 
     def tearDown(self):
         """
@@ -26,7 +27,7 @@ class TestUser(unittest.TestCase):
         test_init test case to test if the object is initialised properly
         """
 
-        self.assertEqual(self.new_user.user_name,"Pitz")
+        # self.assertEqual(self.new_user.user_name,"Pitz")
         self.assertEqual(self.new_user.accountname,"Facebook")
         self.assertEqual(self.new_user.email,"@pitz.com")
         self.assertEqual(self.new_user.password,"Pass123")
@@ -66,7 +67,7 @@ class TestUser(unittest.TestCase):
         test_user = User("Test","account","test@gmail.com","new pass")
         test_user.save_user()
 
-        found_user = User.find_by_accountname("account")
+        found_user = User.find_by_account_name("account")
         self.assertEqual(found_user.email,test_user.email)
 
     def test_user_exists(self):
