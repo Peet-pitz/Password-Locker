@@ -9,7 +9,7 @@ class TestUser(unittest.TestCase):
     Args:
         unittest.TestCase: TestCase class that helps in creating test cases
     """
-    def setup(self):
+    def setUp(self):
         """
         Set up method to run before each rest cases.
         """
@@ -24,6 +24,13 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_user.accountname,"Facebook")
         self.assertEqual(self.new_user.email,"@pitz.com")
         self.assertEqual(self.new_user.password,"Pass123")
+
+    def test_save_user(self):
+        """
+        test_save_user test case to test if the user object is saved into the user list.
+        """
+        self.new_user.save_user()
+        self.assertEqual(len(User.user_list),1)
 
 if __name__ == '__main__':
     unittest.main()
