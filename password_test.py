@@ -77,7 +77,7 @@ class TestUser(unittest.TestCase):
         test_user = User("Test","account","test@gmail.com","new pass")
         test_user.save_user()
 
-        contact_exists = User.user_exist("test@gmail.com")
+        user_exists = User.user_exist("test@gmail.com")
         self.assertTrue(user_exists)
 
 if __name__ == '__main__':
