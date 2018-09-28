@@ -71,18 +71,24 @@ def main():
 
             elif short_code == 'da':
 
-                    if display_user():
+                if display_user():
+                        print("password")
+                        password = input()
+                        if password == "100":
+                            
                             print("Here is a list of all your accounts")
                             print('\n')
+                        else:
+                            print("Wrong password")
 
-                            for user in display_user():
-                                    print(f"{user.account_name} {user.password}")
-                            print('\n')
+                        for user in display_user():
+                                print(f"{user.account_name} {user.password}")
+                        print('\n')
 
-                    else:
-                            print('\n')
-                            print("You dont seem to have any accounts saved yet")
-                            print('\n')
+                else:
+                        print('\n')
+                        print("You dont seem to have any accounts saved yet")
+                        print('\n')
 
             elif short_code == 'fa':
                     print("Enter the account you want to search for")
@@ -100,9 +106,18 @@ def main():
             elif short_code == 'gp':
                     print("Enter new account to generate password")
                     account_name = input()
+                    print("Enter Username")
+                    uname = input()
+                    print("Enter your email")
+                    email = input()
                     password = random.randint(0000,9999)
-                    print("Your password is")
-                    password = input(account_name)
+                    print(f"Your password is {password}")
+
+                   
+                    # password = input(account_name)
+                    save_users(create_user(account_name,uname,email,password))
+                    print('\n')
+                    print(f"new password is generated {account_name} {uname} {password}{email}")
 
             elif short_code == "ex":
                     print("See you soon....")
