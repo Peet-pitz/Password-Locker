@@ -1,23 +1,23 @@
 # Password Locker
-#### This is an app for storing passwords**
+#### This is an app for storing passwords
 ## Description
 This is an app for storing passwords from different accounts so you only have to know one.
 ## Setup/Installation Requirements
 * Python installed 
 * A terminal should be installed
 ## Specifications
-The app can create a new account
-    Input Example: My quote:
-	Output Example: My quote
-The program upvotes a quote
-    Input Example: user clicks upvote
-    Output Example: 2
-The program downvotes a quote
-    Input Example: user clicks downvote
+The app can create a new account through a short code 'ca'
+    Input Example: ca:
+	Output Example: Prompts to create new account through a short code 'da'
+The app can display accounts
+    Input Example: da
+    Output Example: displays existing accounts
+The app can find an account through short code 'fa'
+    Input Example: displays account user was searching for if it exists
     Output Example: 9
-The program can delete a quote
-    Input Example: user clicks delete
-    Output Example: quote is deleted 
+The app can generate a password through short code 'gp'
+    Input Example: gp
+    Output Example: new password is ---- 
 
 ## Technologies Used
 Python 
